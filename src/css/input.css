@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+html{
+    font-family: "Poppins";
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background: #dedede;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header{
+    position: relative;
+    width: 58%;
+    height: 75%;
+    background: #fff;
+    box-shadow: 0px 0px 50px -1px rgba(0,0,0,0.3);
+    padding: 0px 30px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    transition: 1s linear;
+}
+header .logo{
+    position: absolute;
+    top: 0;
+    left: 10%;
+    width: 250px;
+    height: 350px;
+    background: #282828;
+    transition: 1s linear;
+}
+header .logo h1{
+    color: #fff;
+    text-align: center;
+    margin-top: 5px;
+    font-size: 25px;
+    font-weight: 600;
+}
+header .logo img{
+    width: 300px;
+    margin: 20px 0px 0px -30px;
+    filter: drop-shadow(0px 0px 20px rgba(0,0,0,0.6));
+}
+header nav{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header nav .menu{
+    font-size: 25px;
+    color: #000;
+}
+header nav .right_menu{
+    display: flex;
+    align-items: center;
+}
+header nav .right_menu ul{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+header nav .right_menu li{
+    padding: 3px 10px;
+}
+header nav .right_menu li a{
+    position: relative;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 600;
+    color: #000;
+    transition: 3.s linear;
+}
+header nav .right_menu li a::before{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 45%;
+    width: 4px;
+    height: 4px;
+    background: #dc1313;
+    border-radius: 50%;
+    opacity: 0;
+    transition: .3s linear;
+}
+header nav .right_menu li a:hover{
+    color: #dc1313;
+}
+header nav .right_menu li a:hover::before{
+    opacity: 1; 
+}
+header nav .right_menu .user_cart{
+    margin-left: 50px;
+    display: flex;
+    align-items: center;
+}
+header nav .right_menu .user_cart .user{
+    position: relative;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+header nav .right_menu .user_cart .user img{
+    width: 100%;
+}
+header nav .right_menu .user_cart .user::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+    width: 5px;
+    height: 5px;
+    background: #dc1313;
+    border-radius: 50%;
+
+}
+header .left_menu{
+    width: 20px;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+header .left_menu a{
+    margin: 30px 0px;
+    padding: 0px 5px;
+    text-decoration: none;
+    font-size: 10px;
+    color: #000;
+    font-weight: 600;
+    transition: .3s linear;
+    transform: rotate(-90deg);
+}
+header .left_menu a:hover{
+    color: #dc1313;
+}
+/* conteudo */
+header section{
+    width: 97%;
+    height: 90%;
+}
+header section .content{
+    position: relative;
+    left: 379px;
+    margin-top: 10%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    transition: 1s linear;
+}
+header section .content h1{
+    font-size: 40px;
+    transition: 1s linear;
+}
+header section .content p{
+    font-size: 10px;
+    font-weight: 600;
+    width: 290px;
+    word-break: break-all;
+}
+header section .content .price_order{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+header section .content .price_order .price h2{
+    font-size: 20px;
+    color: #dc1313;
+    line-height: 18px;
+}
+header section .content .price_order .price p{
+    font-size: 5.5px;
+    width: 50px;
+}
+header section .content .price_order a{
+    padding: 4px 20px;
+    background: #121212;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    margin-left: 35px;
+}
+
+
+/* Cards */
+header section .cards{
+    width: 90%;
+    height: 140px;
+    position: relative;
+    top: 20%;
+    padding-left: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: auto;
+    scroll-behavior: smooth;
+    transition: 1s linear;
+}
+header section .cards::-webkit-scrollbar{
+   display: none;
+}
+header section .cards .card{
+    position: relative;
+    min-width: 125px;
+    min-height: 125px;
+    border: 1px solid #000;
+    margin-right: 13px;
+    background: #282828;
+    border-radius: 50px 10px 10px 10px;
+}
+header section .cards .card:nth-last-child(1){
+    margin-right: 0px;
+}
+header section .cards .card .dis{
+    width: 70px;
+    position: relative;
+    top: -5px;
+    left: -5px;
+}
+header section .cards .card .steam{
+    width: 60px;
+    height: 80px;
+    position: absolute;
+    top: -35px;
+    left: -5px;
+}
+header section .cards .card h4{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+}
+header section .cards .card h5{
+    color: #fff;
+    font-size: 11px;
+    font-weight: 500;
+    padding: 0px 10px;
+    margin-top: -8px;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+header section .cards .card p{
+    color: rgba(203,203,203,0.5);
+    font-size: 9px;
+    font-weight: 500;
+    padding: 0px 10px;
+}
+header section .cards .card .rate_cart{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2px 10px;
+    color: white;
+}
+header section .cards .card .rate_cart h6{
+    font-size: 10px;
+}
+header section .cards .card .rate_cart .bi{
+    font-size: 12px;
+}
+
+
+/* social */
+header section .social{
+    position: relative;
+    top: 20%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: 1s linear;
+}
+header section .social .btns{
+    margin-left: 30px;
+}
+header section .social .bi{
+    font-size: 13px;
+    cursor: pointer;
+    transition: .3s linear;
+}
+header section .social .bi:hover{
+    color: rgba(0,0,0,0.5);
+}
+header section .social .icons{
+    display: flex;
+    align-items: center;
+}
+header section .social .icons a{
+    font-size: 12px;
+    margin-left: 10px;
+    text-decoration: none;
+    color: #282828;
+    transition: .3s linear;
+}
+header section .social .icons a:hover{
+    color: #000;
+}
+
+/* Responsivo */
+@media screen and (max-width: 1260px){
+    header{
+        width: 83%;
+    }
+}
+@media screen and (max-width: 885px){
+    header{
+        width: 95%;
+    }
+}
+@media screen and (max-width: 775px){
+    header .logo{
+        left: 13%;
+    }
+    header section .content{
+        left: 330px;
+    }
+    header section{
+        width: 92%;
+    }
+}
+@media screen and (max-width: 730px){
+    header{
+        width: 100%;
+        height: 100%;
+    }
+    header nav .right_menu ul li{
+        padding: 3px 6px;
+    }
+}
+@media screen and (max-width: 685px){
+    header nav .right_menu ul{
+        position: absolute;
+        top: 20%;
+        right: 17px;
+        flex-direction: column;
+        width: 15px;
+    }
+    header nav .right_menu ul li{
+        padding: 30px 10px;
+        transform: rotate(90deg);
+    }
+    header section .content{
+        left: 24%;
+        top: 38%;
+    }
+    header .logo{
+        left: 30%;
+    }
+    header section .cards{
+        top: 43%;
+    }
+    header section .social{
+        top: 45%;
+    }
+}
+
+@media screen and (max-width: 500px){
+    header section .content{
+        left: 11%;
+        top: 38%;
+    }
+    header .logo{
+        left: 20%;
+    }
+}
+@media screen and (max-width: 418px){
+    header section .content h1{
+        font-size: 32px;
+    }
+    header section .content p{
+        font-size: 9px;
+        width: 220px;
+    }
+    header .logo{
+        width: 200px;
+    }
+    header .logo img{
+        width: 245px;
+        margin: 75px 0px 0px -30px;
+    }
+    
+}
